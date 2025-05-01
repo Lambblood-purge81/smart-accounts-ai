@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+SmartAccounts AI
+SmartAccounts AI is an intelligent interview support chatbot application designed to help users navigate through accounting and finance-related interview questions. This application uses voice input and output, providing a seamless experience for users to ask questions and receive spoken answers. The chatbot is built using React.js, Bootstrap, and Web Speech API.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Voice Input: Users can speak their questions, and the chatbot will recognize and transcribe their speech.
 
-## Available Scripts
+Voice Output: The chatbot can respond to user queries with synthesized voice output.
 
-In the project directory, you can run:
+Interactive Chat Interface: The interface allows users to type in their queries and receive both text and voice-based responses.
 
-### `npm start`
+Modern UI: The app is built with a modern, responsive design using Bootstrap to ensure it looks great on both desktop and mobile devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Technologies Used
+React.js: JavaScript library for building user interfaces.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Bootstrap: Front-end framework for building responsive layouts.
 
-### `npm test`
+Web Speech API: Native browser API for speech recognition and synthesis (voice input/output).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React-Bootstrap: Bootstrap components implemented in React.
 
-### `npm run build`
+FontAwesome: For the microphone icon used in the voice input button.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Setup Instructions
+Prerequisites
+Ensure you have the following installed on your machine:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Node.js (version 14 or higher)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm (Node package manager)
 
-### `npm run eject`
+1. Clone the repository
+First, clone the repository to your local machine:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+bash
+Copy
+git clone https://github.com/yourusername/smart-accounts-ai.git
+cd smart-accounts-ai
+2. Install dependencies
+Run the following command to install all necessary dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
+Copy
+npm install
+3. Start the development server
+After installing the dependencies, start the development server by running:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+bash
+Copy
+npm start
+This will start the application at http://localhost:3000 in your browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Build for production
+To create a production build of the app, run:
 
-## Learn More
+bash
+Copy
+npm run build
+This will create a build/ folder with the optimized production version of the app.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+File Structure
+plaintext
+Copy
+smart-accounts-ai/
+│
+├── public/                    # Public assets (index.html, icons, etc.)
+├── src/                       # Source files
+│   ├── assets/                # Images, logos, icons
+│   ├── components/            # Reusable UI components (VoiceInput, Navbar, etc.)
+│   ├── pages/                 # Pages of the application (ChatbotPage, Dashboard, etc.)
+│   ├── styles/                # Custom CSS/SCSS files
+│   ├── App.js                 # Main React component
+│   ├── AppRoutes.js           # Routing setup for the app
+│   └── index.js               # Entry point to the app
+├── .gitignore                 # Specifies files to be ignored by Git
+├── package.json               # Project metadata and dependencies
+├── README.md                  # This file
+└── package-lock.json          # Lock file for installed dependencies
+How It Works
+Voice Recognition: The app uses the Web Speech API to listen to users' voice input. When the user presses the "Start Listening" button, the app listens for their speech and transcribes it into text.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Voice Output: Once the transcription is completed, the chatbot responds with a text-based message. The SpeechSynthesis API converts the response text into voice, and the bot speaks it back to the user.
 
-### Code Splitting
+Chat Interface: Users can also interact with the chatbot by typing questions into the input field, which simulates the same experience as the voice-based interaction.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contributing
+If you'd like to contribute to the project, feel free to fork the repository and submit a pull request with your changes.
 
-### Analyzing the Bundle Size
+Fork the repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Create your feature branch (git checkout -b feature/your-feature)
 
-### Making a Progressive Web App
+Commit your changes (git commit -am 'Add new feature')
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Push to your branch (git push origin feature/your-feature)
 
-### Advanced Configuration
+Open a pull request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
